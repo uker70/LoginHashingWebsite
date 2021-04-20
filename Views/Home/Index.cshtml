@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    @using (Html.BeginForm("UserLogin", "Home"))
+    {
+        <div class="col-md-4">
+            <h1>Login</h1>
+            <label>Username</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label>Password</label>
+            <input type="text" id="password" name="password" />
+
+            <input type="submit" value="Login" />
+        </div>
+    }
+    @using (Html.BeginForm("UserCreate", "Home"))
+    {
+        <div class="col-md-4">
+            <h1>Create User</h1>
+            <label>Username</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label>Password</label>
+            <input type="text" id="password" name="password" />
+
+            <input type="submit" value="Create User" />
+        </div>
+    }
+</div>
